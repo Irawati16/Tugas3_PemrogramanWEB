@@ -61,8 +61,34 @@
 
 .form .column{
     display: flex;
-    column-gap: 15px;
+    column-gap: 15px
+}
 
+.form .jeniskelamin-box{
+    margin-top: 20px;
+}
+
+.jeniskelamin-box h3{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.form :where(.jeniskelamin-option, .jeniskelamin){
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form .jeniskelamin{
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.form :where(.jeniskelamin input, .jeniskelamin label){
+    cursor: pointer;
 }
 
 .JenisKelamin :where(input, .select-box){
@@ -100,5 +126,8 @@
 @media screen and (max-width:500px){
     .form .column {
         flex-wrap: wrap;
+    }
+    .form :where(.jeniskelamin-option, .jeniskelamin){
+        row-gap: 15px;
     }
 }
